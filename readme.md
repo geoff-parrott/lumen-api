@@ -4,6 +4,7 @@
 I am familiar with Laravel and have maintained Lumen applications in the past but I have not set up an API using Lumen from scratch, this is why I chose to use Lumen.
 
 > **Note:**
+> Production ready therefor the `.env` file and `vendor` folder are included.
 > This is using CSV as the datasource.
 > Data is stored in `storage/app/recipe-data.csv` and requires read/write permissions.
 > Assumes there is a container capable of running Lumen.
