@@ -234,7 +234,7 @@ class RecipeController extends Controller
     public function setDataToCSV()
     {
         try {
-            $filename = storage_path('app/recipe-data-new.csv');
+            $filename = storage_path('app/recipe-data.csv');
             $file_input = fopen($filename,"w");
 
             fputcsv($file_input, $this->keys[0]);

@@ -1,7 +1,7 @@
 # Lumen API - Recipe
 
 ### Why lumen:
-I am familiar with Laravel and have maintained Lumen applications in the past but I have not set up an API using Lumen from scratch, this is why I chose to use Lumen.
+I am familiar with Laravel and have maintained Lumen applications in the past but I have not set up an API using Lumen from scratch, this is why I chose to use Lumen. I would have liked to have used the resource design pattern but limited time prohibited.
 
 > **Note:**
 > This is using CSV as the datasource.
