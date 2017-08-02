@@ -108,7 +108,7 @@ class RecipeController extends Controller
         // write only valid keys sent in payload
         foreach ($payload as $key => $value) {
             if (in_array($key, $this->keys[0])) {
-                $this->data[$id][$key] = filter_var($value, FILTER_SANITIZE_ENCODED);
+                $this->data[$id][$key] = $value;
             }
         };
         
@@ -149,7 +149,7 @@ class RecipeController extends Controller
         foreach ($keys as $validKey) {
             if (array_key_exists($validKey, $payload)) {
                 // construct the new record
-                $newRecord[$validKey] = filter_var($payload[$validKey], FILTER_SANITIZE_ENCODED);
+                $newRecord[$validKey] = $payload[$validKey];
             } else if (!in_array($validKey, $this->fieldExceptions)){
                 // add to error fields
                 $this->errors[] = array(
@@ -234,7 +234,7 @@ class RecipeController extends Controller
     public function setDataToCSV()
     {
         try {
-            $filename = storage_path('app/recipe-data-new.csv');
+            $filename = storage_path('app/recipe-data.csv');
             $file_input = fopen($filename,"w");
 
             fputcsv($file_input, $this->keys[0]);
